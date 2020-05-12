@@ -1,5 +1,5 @@
 function __applyListeners() {
-    const $table = document.querySelector("div.card-body > div > table");
+    const $table = document.querySelector("div.col-md-11 > div > div > div.card-body > div > table");
     if ($table.dataset["__loaded"] == "true") return;
     $table.dataset["__loaded"] = "true";
 
@@ -21,3 +21,8 @@ function __applyListeners() {
 }
 
 setInterval(__applyListeners, 5000);
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.querySelector("#theme-stylesheet").href = "/assets/darkly-a248c0ba83b2ef421891ad2638a9df38.css";
+    }, 1000);
+});
