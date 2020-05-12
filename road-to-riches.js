@@ -1,5 +1,5 @@
 function __applyListeners() {
-    const $table = document.querySelector("div.col-md-11 > div > div > div.card-body > div > table");
+    const $table = document.querySelector("div.card-body > div > table");
     if ($table.dataset["__loaded"] == "true") return;
     $table.dataset["__loaded"] = "true";
 
