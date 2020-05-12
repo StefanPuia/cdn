@@ -16,13 +16,16 @@ function __applyListeners() {
             $tr.querySelectorAll("td").forEach(td => td.style.backgroundColor = "black");
             $tr.querySelectorAll("td").forEach(td => td.style.color = "white");
         }
-        $tr.dataset["__toggle"] = (!$tr.data("__toggle")).toString();
+        $tr.dataset["__toggle"] = (!$tr.dataset["__toggle"]).toString();
     }
 }
 
 setInterval(__applyListeners, 5000);
 window.addEventListener("load", () => {
     setTimeout(() => {
-        document.querySelector("#theme-stylesheet").href = "/assets/darkly-a248c0ba83b2ef421891ad2638a9df38.css";
+        const darkMode = document.createElement("link");
+        darkMode.href = "/assets/darkly-a248c0ba83b2ef421891ad2638a9df38.css";
+        darkMode.rel = "stylesheet";
+        document.querySelector("head").append(darkMode);
     }, 1000);
 });
