@@ -1,5 +1,5 @@
 function __applyListeners() {
-    const $tableToggles = $("div.col-md-11 > div > div > div.card-body > div > table > tbody > tr > td:nth-child(1)");
+    const $tableToggles = $("div.col-md-11 > div > div > div.card-body > div > table > tbody > tr > td");
     $tableToggles.off("click", __toggleBG);
     $tableToggles.on("click", __toggleBG);
 
