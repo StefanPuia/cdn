@@ -8,6 +8,7 @@ function __applyListeners() {
 
     function __toggleBG(e) {
         const $td = e.currentTarget;
+        if (e.currentTarget.nodeName.toLowerCase() !== "td") return;
         const $tr = $td.parentNode;
         if ($tr.dataset["__toggle"] == "true") {
             $tr.querySelectorAll("td").forEach(td => td.style.backgroundColor = "unset");
