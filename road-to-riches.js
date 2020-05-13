@@ -7,8 +7,8 @@ function __applyListeners() {
     $tableToggles.forEach(tr => tr.addEventListener("click", __toggleBG));
 
     function __toggleBG(e) {
+        if (e.target.nodeName.toLowerCase() !== "td") return;
         const $td = e.currentTarget;
-        if (e.currentTarget.nodeName.toLowerCase() !== "td") return;
         const $tr = $td.parentNode;
         if ($tr.dataset["__toggle"] == "true") {
             $tr.querySelectorAll("td").forEach(td => td.style.backgroundColor = "unset");
