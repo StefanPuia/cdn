@@ -7,7 +7,7 @@
                 const platform = row.querySelector("td.rescue-row-platform");
                 if (platform) {
                     if (!platform.classList.contains("platform-PC")) {
-                        platform.style.opacity = 0.3;
+                        row.style.opacity = 0.3;
                     }
                 }
             }
